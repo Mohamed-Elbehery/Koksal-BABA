@@ -1,0 +1,260 @@
+/*! General Styles */
+:root {
+  --section-top-space: 8rem;
+  --container-width: 90%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("../assets/koksal-baba-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: var(--container-width);
+  margin: 0 auto;
+}
+
+.about,
+.gallery,
+.contact-us {
+  min-height: 100vh;
+}
+
+.fixed {
+  padding: 1rem 3rem;
+  position: fixed;
+  width: 100%;
+  margin-left: 0;
+  top: 0;
+  background-color: rgba(128, 128, 128, 0.6);
+}
+
+/*TODO Media Queries */
+/** 791px */
+@media screen and (max-width: 791px) {
+  body {
+    background-position: right;
+  }
+}
+/*! Main Styles */
+/* Start of Header Styles */
+header {
+  position: fixed;
+  top: 20px;
+  background-color: rgba(128, 128, 128, 0.3);
+  backdrop-filter: blur(5px);
+  padding: 1rem 3.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 94%;
+  margin-left: calc((100% - 94%) / 2);
+  transition: 0.4s;
+  z-index: 1;
+}
+
+header .logo a {
+  transition: 0.25s;
+  color: white;
+  font-style: italic;
+}
+
+header .logo a span {
+  color: rgb(120, 138, 211);
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li {
+  list-style: none;
+  padding: 0 1.2rem;
+  margin-top: 10px;
+}
+
+header nav ul li a {
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+header nav ul li a:hover {
+  color: rgb(120, 138, 211);
+}
+
+/*TODO Header Media Queries */
+/** 791px */
+@media screen and (max-width: 791px) {
+  header {
+    flex-direction: column;
+    padding: 1rem 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  header .logo {
+    margin-bottom: 10px;
+  }
+
+  header nav ul li {
+    padding: 0 0.8rem;
+  }
+
+  header nav ul li a {
+    font-size: 13px;
+  }
+}
+/* End of Header Styles */
+/* Start of Landing Styles */
+.landing {
+  min-height: 100vh;
+  padding-top: 24rem;
+}
+
+.landing .landing-content {
+  color: white;
+  width: fit-content;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+.landing .landing-content h2 {
+  letter-spacing: 1.5px;
+  line-height: 1.6;
+  font-size: 30px;
+}
+
+.landing .landing-content h2 span {
+  font-style: italic;
+}
+
+.landing .landing-content h2 span span {
+  color: rgb(120, 138, 211);
+}
+
+.landing .landing-content p {
+  width: 75%;
+  margin-top: 8px;
+  line-height: 1.2;
+  letter-spacing: 1.3px;
+  color: rgb(180, 180, 180);
+  font-size: 20px;
+}
+
+.landing .landing-content button {
+  color: black;
+  background-color: white;
+  margin-top: 1.5rem;
+  font-size: 22px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 3px solid white;
+  transition: 0.25s;
+}
+
+.landing .landing-content button:hover {
+  color: white;
+  background-color: transparent;
+}
+
+/*TODO Header Media Queries */
+/** 1366px */
+@media screen and (max-width: 1366px) {
+  .landing {
+    padding-top: 15rem;
+  }
+}
+/** 791px */
+@media screen and (max-width: 791px) {
+  .landing .landing-content {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .landing .landing-content p {
+    width: 100%;
+  }
+}
+/** 514px */
+@media screen and (max-width: 514px) {
+  .landing .landing-content h2 {
+    font-size: 18px;
+  }
+
+  .landing .landing-content p {
+    width: 100%;
+    font-size: 14px;
+  }
+
+  .landing .landing-content button {
+    font-size: 16px;
+  }
+}
+/* End of Landing Styles */
+/* Start of About Styles */
+.about {
+  padding-top: 7rem;
+  padding-bottom: 3rem;
+  background-color: black;
+}
+
+.about .about-content {
+  font-size: 22px;
+  color: #999;
+  line-height: 1.7;
+}
+
+.about .about-content .title h2 {
+  border-bottom: 4px solid white;
+  border-top: 4px solid white;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 5px 0;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: white;
+  transition: 0.3s;
+  margin-bottom: 4rem;
+}
+
+.about .about-content .about-info {
+  font-size: 22px;
+  color: #999;
+  line-height: 1.7;
+  display: flex;
+  align-items: center;
+}
+
+.about .about-content img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1310px) {
+  .about .about-content .about-info {
+    flex-direction: column;
+  }
+
+  .about {
+    padding-top: 10rem;
+  }
+}
+/* End of About Styles */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Assignment-1</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <h1>
+          <a href="index.html"
+            >Koksal
+            <span>BABA</span>
+          </a>
+        </h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#contact-us">Contact Us</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="landing container">
+      <div class="landing-content">
+        <h2>
+          Hello<br /><span>I am Koksal <span>BABA</span></span>
+        </h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+          expedita quam et mollitia cum dignissimos.
+        </p>
+        <button>Contact Me</button>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about-content container">
+        <div class="title"><h2>About</h2></div>
+        <div class="about-info">
+          <img src="./assets/about.png" />
+          <p>
+            Koksal BABA was born in 1975 in Trabzon. BABA has a developmental
+            disorder that is not seen in other members of his family and has not
+            been diagnosed yet.<br />
+            Baba became known especially with the sharing of videos of him
+            fighting with Necati Kekeş, nicknamed Riçırt.<br />
+            BABA`s videos published on the internet were watched by many
+            internet users in various countries. In 2016, the Italian newspaper
+            Il Primato Nazionale reported that Baba was followed by thousands of
+            Italian Facebook users and that he had a Facebook page called “il
+            nano ottomano”.<br />
+            In April 2020, the Spanish press reported that BABA was named
+            "Nadie" by Spanish internet users and that videos containing parody
+            of various movements he made were published on the TikTok
+            application under the hashtag #Nadie.<br />
+            In 2021, WhatsApp GIFs and stickers featuring Baba reportedly spread
+            in Argentina.<br />The short documentary film Koksal Baba: The Red
+            Truck, directed by Koray Söğüt, about BABA life, was released in
+            November 2020.<br />
+          </p>
+        </div>
+        <p>
+          The short documentary film Koksal Baba: The Red Truck, directed by
+          Koray Söğüt, about BABA life, was released in November 2020.<br />
+          In May 2021, Real Madrid player, Brazilian Marcelo invited Koksal Baba
+          to Spain for a party.<br />
+          In late of 2022, Koksal Baba has been created in the Crypto market as
+          the NFT-Game project.
+          <br />
+          In April 2020, the Spanish press reported that BABA was named "Nadie"
+          by Spanish internet users and that videos containing parody of various
+          movements he made were published on the TikTok application under the
+          hashtag #Nadie.<br />
+          In 2021, WhatsApp GIFs and stickers featuring Baba reportedly spread
+          in Argentina.
+        </p>
+      </div>
+    </section>
+    <section class="gallery container" id="gallery"></section>
+    <section class="contact-us container" id="contact-us"></section>
+    <script>
+      const header = document.querySelector("header");
+      const yAxis = header.offsetTop;
+      window.onscroll = () => {
+        window.pageYOffset >= yAxis
+          ? header.classList.add("fixed")
+          : header.classList.remove("fixed");
+      };
+    </script>
+  </body>
+</html>
